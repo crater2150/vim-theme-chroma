@@ -145,7 +145,7 @@ let s:theme = [
 \ ['MatchParen',   'NONE',        'lightred',    'bold'],
 \ ['Comment',      'NONE',        'gray',        'NONE'],
 \ ['Constant',     'NONE',        'green',       'NONE'],
-\ ['Keyword',      'NONE',        'normfg',      'NONE'],
+\ ['Keyword',      'NONE',        'blue',        'NONE'],
 \ ['Identifier',   'NONE',        'lightgray',   'NONE'],
 \ ['Statement',    'NONE',        'blue',        'NONE'],
 \ ['PreProc',      'NONE',        'orange',      'NONE'],
