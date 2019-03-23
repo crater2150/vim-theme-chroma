@@ -134,7 +134,7 @@ endif
 "        HiGroup         BG Color       FG Color       Attributes
 let s:theme = [
 \ ['Normal',       'normbg',      'normfg',      'NONE'],
-\ ['Underlined',   'NONE',        'NONE',        'NONE'],
+\ ['Underlined',   'NONE',        'NONE',        'underline'],
 \ ['Error',        'red',         'white',       'NONE'],
 \ ['String',       'NONE',        'lightred',    'NONE'],
 \ ['Todo',         'black',       'orange',      'NONE'],
