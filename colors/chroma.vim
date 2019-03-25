@@ -131,10 +131,12 @@ else
   "}}}
 endif
 
+let g:chroma_underline_style = get(g:, 'chroma_underline_style', "italic")
+
 "        HiGroup         BG Color       FG Color       Attributes
 let s:theme = [
 \ ['Normal',       'normbg',      'normfg',      'NONE'],
-\ ['Underlined',   'NONE',        'NONE',        'NONE'],
+\ ['Underlined',   'NONE',        'NONE',        g:chroma_underline_style],
 \ ['Error',        'red',         'white',       'NONE'],
 \ ['String',       'NONE',        'lightred',    'NONE'],
 \ ['Todo',         'black',       'orange',      'NONE'],
@@ -180,10 +182,10 @@ let s:theme = [
 \ ['Search',       'orange',      'visualgray',   'NONE'],
 \
 \ ['TabLine',      'bggray',      'blue',        'NONE'],
-\ ['TabLineSel',   'bggray',      'orange',      'underline'],
+\ ['TabLineSel',   'bggray',      'orange',      g:chroma_underline_style],
 \ ['TabLineFill',  'bggray',      'lightgray',   'NONE'],
 \
-\ ['Folded',       'bggray',      'lightgray',   'underline'],
+\ ['Folded',       'bggray',      'lightgray',   g:chroma_underline_style],
 \
 \ ['DiffAdd',      'bg',          'green',       'NONE'],
 \ ['DiffChange',   'bg',          'yellow',      'NONE'],
