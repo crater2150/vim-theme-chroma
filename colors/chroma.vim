@@ -132,6 +132,13 @@ else
 endif
 
 let g:chroma_underline_style = get(g:, 'chroma_underline_style', "italic")
+let g:chroma_italic_style = get(g:, 'chroma_italic_style', "italic")
+
+if g:chroma_nontext_dark
+  let s:nontext = 'normbg'
+else
+  let s:nontext = 'bggray'
+end
 
 "        HiGroup         BG Color       FG Color       Attributes
 let s:theme = [
@@ -141,7 +148,7 @@ let s:theme = [
 \ ['String',       'NONE',        'lightred',    'NONE'],
 \ ['Todo',         'black',       'orange',      'NONE'],
 \ ['Number',       'NONE',        'green',       'NONE'],
-\ ['Special',      'NONE',        'yellow',      'italic'],
+\ ['Special',      'NONE',        'yellow',      g:chroma_italic_style],
 \ ['Function',     'NONE',        'orange',      'NONE'],
 \ ['SpecialKey',   'NONE',        'red',         'NONE'],
 \ ['MatchParen',   'NONE',        'lightred',    'bold'],
@@ -153,7 +160,7 @@ let s:theme = [
 \ ['PreProc',      'NONE',        'orange',      'NONE'],
 \ ['Type',         'NONE',        'lightblue',   'Bold'],
 \ ['Visual',       'visualgray',  'NONE',        'NONE'],
-\ ['NonText',      'bggray',      'NONE',        'NONE'],
+\ ['NonText',      s:nontext,      'NONE',        'NONE'],
 \ ['LineNr',       'bggray',      'gray',        'NONE'],
 \
 \ ['Pmenu',        'bggray',      'lightgray',   'NONE'],
