@@ -133,6 +133,7 @@ endif
 
 let g:chroma_underline_style = get(g:, 'chroma_underline_style', "italic")
 let g:chroma_italic_style = get(g:, 'chroma_italic_style', "italic")
+let g:chroma_nontext_dark = get(g:, 'chroma_nontext_dark', 0)
 
 if g:chroma_nontext_dark
   let s:nontext = 'normbg'
