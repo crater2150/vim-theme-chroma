@@ -134,6 +134,7 @@ endif
 let g:chroma_underline_style = get(g:, 'chroma_underline_style', "italic")
 let g:chroma_italic_style = get(g:, 'chroma_italic_style', "italic")
 let g:chroma_nontext_dark = get(g:, 'chroma_nontext_dark', 0)
+let g:chroma_legacy_normal_bg = get(g:, 'chroma_legacy_normal_bg', 0)
 
 if g:chroma_nontext_dark
   let s:nontext = 'normbg'
@@ -141,9 +142,15 @@ else
   let s:nontext = 'bggray'
 end
 
+if g:chroma_legacy_normal_bg
+  let s:normal_bg = 'normbg'
+else
+  let s:normal_bg = 'NONE'
+end
+
 "        HiGroup         BG Color       FG Color       Attributes
 let s:theme = [
-\ ['Normal',       'normbg',      'normfg',      'NONE'],
+\ ['Normal',       s:normal_bg,   'normfg',      'NONE'],
 \ ['Underlined',   'NONE',        'NONE',        g:chroma_underline_style],
 \ ['Error',        'red',         'white',       'NONE'],
 \ ['String',       'NONE',        'lightred',    'NONE'],
@@ -195,10 +202,10 @@ let s:theme = [
 \
 \ ['Folded',       'bggray',      'lightgray',   g:chroma_underline_style],
 \
-\ ['DiffAdd',      'bg',          'green',       'NONE'],
-\ ['DiffChange',   'bg',          'yellow',      'NONE'],
-\ ['DiffDelete',   'bg',          'lightred',    'bold'],
-\ ['DiffText',     'bg',          'fg',          'NONE'],
+\ ['DiffAdd',      'NONE',        'green',       'NONE'],
+\ ['DiffChange',   'NONE',        'yellow',      'NONE'],
+\ ['DiffDelete',   'NONE',        'lightred',    'bold'],
+\ ['DiffText',     'NONE',        'fg',          'NONE'],
 \
 \ ['SpellBad',     'NONE',        'red',         'undercurl'],
 \ ['SpellCap',     'NONE',        'blue',        'undercurl'],
