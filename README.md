@@ -37,6 +37,16 @@ let g:chroma_nontext_dark = 1
 
 If you want to set these just when editing certain filetypes, remember to also reload the colortheme on every change of the variables.
 
-See http://vimcolors.com/597/chroma for preview.
+See [vimcolors preview](http://vimcolors.com/597/chroma).
 
 See [chroma-colors](https://github.com/crater2150/chroma-colors) for this color scheme for other applications
+
+## Plugin support
+
+Chroma includes a theme for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim):
+
+```
+require('lualine').setup {
+  options = { theme  = require('chroma-theme.lualine') },
+	...
+```
