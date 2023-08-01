@@ -1,10 +1,27 @@
 # vim-theme-chroma — Lush version
 
-A neovim theme with vivid colors for use with [lush.nvim](https://github.com/rktjmp/lush.nvim).
+A Neovim theme with vivid colors for use with [lush.nvim](https://github.com/rktjmp/lush.nvim).
 
 ![](screenshot.png)
 
 For the original vimscript version, see the `legacy` branch.
+
+## Installation / Usage
+
+Install the theme as well as `rktjmp/lush.nvim` with the package manager of
+your choice, then set the color scheme to `chroma`.
+
+E.g. with [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+  'crater2150/vim-theme-chroma',
+  lazy = false,
+  priority = 1000,
+  dependencies = { 'rktjmp/lush.nvim' },
+  config = function() vim.cmd.colorscheme("chroma") end
+},
+```
 
 ## Customizing
 
