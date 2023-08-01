@@ -2,6 +2,8 @@
 
 A vim theme for GUI and 256-color terminal with vivid colors. Dark and light background version included.
 
+For neovim users, a truecolor variant using [lush.nvim](https://github.com/rktjmp/lush.nvim) can be found in the `lush` branch.
+
 ## Customizing
 There are some variables to customize the theme. You have to set these *before setting the color theme*.
 
