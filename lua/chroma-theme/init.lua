@@ -92,6 +92,7 @@ local theme = lush(function(injected_functions)
     TabLineSel                           { bg=LineNr.bg, gui="italic", fg=Function.fg, },
     TabLineFill                          { Folded },
     ColorColumn                          { bg=CursorColumn.bg.darken(20), },
+    LspCodeLens                          { fg = Special.fg.darken(35).desaturate(30), bg=base.uibg.lighten(10), gui="italic" },
 
     -- Treesitter highlights
     sym"@text.reference"    { DiagnosticInfo, gui="underline" },
